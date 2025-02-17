@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Muhammad Rifqi Fathurrahman</title>
-  </head>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Selamat Datang</title>
     <style>
-      .animated-text {
-        font-size: 36px;
-        font-weight: bold;
-        color: #0f0a0a;
-        animation: text-animation 3s ease-in-out infinite;
+      body {
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
       }
-
-      @keyframes text-animation {
+      @keyframes gerak {
         0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-20px);
+          transform: translateX(-100%);
         }
         100% {
-          transform: translateY(0);
+          transform: translateX(100%);
         }
       }
+      .selamat-datang {
+        display: inline-block;
+        white-space: nowrap;
+        animation: gerak 10s linear infinite;
+      }
     </style>
-    <title>Animasi Teks</title>
   </head>
   <body>
-    <div class="animated-text">Selamat Datang</div>
+    <h1 class="selamat-datang">Selamat Datang</h1>
   </body>
-  <body>
-    <h1>Muhammad Rifqi Fathurrahman</h1>
-    <p>
-      Saya adalah mahasiswa Teknik Informatika Universitas Riau dan Ini adalah
-      web pertama saya
-    </p></html>
+</html>
