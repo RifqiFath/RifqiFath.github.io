@@ -3,34 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Rifqi Fathurrahman</title>
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="styles.css" />
     <style>
       body {
-        background-color: blue;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        font-family: Arial, sans-serif;
         margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #2f13ae;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
         overflow: hidden;
       }
-      @keyframes gerak {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(100%);
-        }
+
+      nav ul li {
+        float: left;
       }
-      .selamat-datang {
-        display: inline-block;
-        white-space: nowrap;
-        animation: gerak 10s linear infinite;
+
+      nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        background-color: #111;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <h1 class="selamat-datang">Selamat Datang</h1>
+    <header>
+      <h1>Muhammad Rifqi Fathurrahman</h1>
+      <p>Mahasiswa teknik informatika</p>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p>
+        Nama Saya Muhammad Rifqi Fathurrahman,Saya Adalah Seorang Mahasiswa
+        Program Studi Teknik Informatika di Universitas Riau dan Ini Adalah Web
+        Pertama yang Telah Saya Buat.
+      </p>
+    </section>
+    <section id="projects">
+      <h2>Proyek</h2>
+      <ul>
+        <li>Proyek 1</li>
+        <li>Proyek 2</li>
+        <li>Proyek 3</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Kontak</h2>
+      <p>Email: <a href="mailto:email@contoh.com">mrifqi.fath@gmail.com</a></p>
+      <p>Whatsapp: <a href="mailto:email@contoh.com">0896 2020 6621</a></p>
+    </section>
+    <footer>
+      <p>&copy; 2025 Muhammad Rifqi Fathurrahman</p>
+    </footer>
   </body>
 </html>
