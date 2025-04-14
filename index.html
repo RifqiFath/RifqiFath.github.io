@@ -1,140 +1,173 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Saya</title>
-  <style>
-    /* Gaya Umum */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .animated-text {
-      display: inline-block;
-      font-size: 36px;
-      font-weight: bold;
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid white;
-      animation: typing 4s steps(14) 1s forwards, blink 0.5s step-end infinite;
-    }
-
-    @keyframes typing {
-      from {
-        width: 0;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Saya</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      /* Gaya Umum */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      to {
-        width: 14ch;
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
       }
-    }
 
-    @keyframes blink {
-      50% {
-        border-color: transparent;
+      .animated-text {
+        display: inline-block;
+        font-size: 36px;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid white;
+        animation: typing 4s steps(14) 1s forwards, blink 0.5s step-end infinite;
       }
-    }
 
-    nav {
-      background-color: #444;
-      overflow: hidden;
-    }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 14ch;
+        }
+      }
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
 
-    nav ul li {
-      margin: 0;
-    }
+      nav {
+        background-color: #444;
+        overflow: hidden;
+      }
 
-    nav ul li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
 
-    nav ul li a:hover {
-      background-color: #555;
-    }
+      nav ul li {
+        margin: 0;
+      }
 
-    section {
-      padding: 20px;
-      height: 100vh;
-      text-align: center;
-    }
+      nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
 
-    section:nth-child(odd) {
-      background-color: #f4f4f4;
-    }
+      nav ul li a:hover {
+        background-color: #555;
+      }
 
-    section:nth-child(even) {
-      background-color: #e8e8e8;
-    }
+      section {
+        padding: 20px;
+        height: auto;
+        text-align: center;
+      }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="animated-text">Selamat Datang</div>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#tugas">Tugas</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">Tentang Saya</a></li>
-    </ul>
-  </nav>
-  <section id="home">
-    <h2>Home</h2>
-    <p>Selamat datang di website portofolio saya</p>
-  </section>
-  <section id="tugas">
-    <h2>Tugas</h2>
-    <p>UJIAN TENGAH SEMESTER</p>
-    <!-- Menambahkan tombol download -->
-    <a href="UTS SISMUL.pdf" download>Download UTS SISMUL</a>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mrifqi.fath@gmail.com">mrifqi.fath@gmail.com</a></p>
-    <p>Telepon: 0896-2020-6621</p>
-  </section>
-  <section id="about">
-    <h2>Tentang Saya</h2>
-    <p>Halo! Nama Saya Muhammad Rifqi Fathurrahman, Saya Adalah Seorang Mahasiswa
-      Program Studi Teknik Informatika di Universitas Riau dan Ini Adalah Web
-      Pertama yang Telah Saya Buat. Saya lahir di Pekanbaru pada tanggal 9 Mei
-      2005.</p>
-  </section>
-  <footer>
-    <p>&copy; Portofolio Muhammad Rifqi Fathurrahman</p>
-  </footer>
-</body>
+      section:nth-child(odd) {
+        background-color: #f4f4f4;
+      }
+
+      section:nth-child(even) {
+        background-color: #e8e8e8;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="animated-text">Selamat Datang</div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tugas">Tugas</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">Tentang Saya</a></li>
+      </ul>
+    </nav>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Halo! nama saya Muhammad Rifqi Fathurrahman</p>
+    </section>
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <img
+        src="foto-saya.jpg.jpg"
+        alt="Foto Saya"
+        style="width: 600px; border-radius: 10px; margin-bottom: 20px"
+      />
+      <p>
+        Halo! Nama saya <strong>Muhammad Rifqi Fathurrahman</strong>. Saya adalah mahasiswa Program Studi Teknik Informatika di <strong>Universitas Riau</strong>. Ini merupakan website portofolio pertama yang saya buat sebagai bagian dari proses pembelajaran dan pengembangan diri di dunia teknologi dan pemrograman.<br /><br />
+        Saya lahir di Pekanbaru pada tanggal <strong>9 Mei 2005</strong>, dan saya memiliki minat besar dalam bidang teknologi informasi serta pengembangan web. Terima kasih telah mengunjungi website saya!
+      </p>
+      </p>
+    </section>
+    <section id="tugas">
+      <h2>Tugas</h2>
+      <p>UJIAN TENGAH SEMESTER</p>
+      <a href="UTS SISMUL.pdf" download>Download UTS SISMUL</a>
+      <br /><br />
+      <h3>VIDEO</h3>
+      <video width="640" controls>
+        <source src="video saya.mp4" type="video/mp4" />
+        Browser Anda tidak mendukung pemutar video.
+      </video>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:mrifqi.fath@gmail.com">mrifqi.fath@gmail.com</a>
+      </p>
+      <p>
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/6289620206621" target="_blank">0896-2020-6621</a>
+      </p>
+      <p>
+        <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/rifqi_fthr" target="_blank"
+          >@rifqi_fth</a
+        >
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; Portofolio Muhammad Rifqi Fathurrahman</p>
+    </footer>
+  </body>
 </html>
