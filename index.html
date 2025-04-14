@@ -1,144 +1,140 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Saya</title>
-    <style>
-      /* Gaya Umum */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <style>
+    /* Gaya Umum */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-      header {
-        background-color: #333;
-        color: white;
-        padding: 15px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-      /* Animasi teks header */
-      .animated-text {
-        display: inline-block;
-        font-size: 36px;
-        font-weight: bold;
-        overflow: hidden; /* Agar teks tersembunyi sebelum tampil */
-        white-space: nowrap;
-        border-right: 2px solid white; /* Efek kursor */
-        animation: typing 4s steps(14) 1s forwards, blink 0.5s step-end infinite;
-      }
+    .animated-text {
+      display: inline-block;
+      font-size: 36px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid white;
+      animation: typing 4s steps(14) 1s forwards, blink 0.5s step-end infinite;
+    }
 
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 14ch; /* Panjang karakter "Selamat Datang" */
-        }
+    @keyframes typing {
+      from {
+        width: 0;
       }
+      to {
+        width: 14ch;
+      }
+    }
 
-      @keyframes blink {
-        50% {
-          border-color: transparent;
-        }
+    @keyframes blink {
+      50% {
+        border-color: transparent;
       }
+    }
 
-      /* Navigasi */
-      nav {
-        background-color: #444;
-        overflow: hidden;
-      }
+    nav {
+      background-color: #444;
+      overflow: hidden;
+    }
 
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-      }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
 
-      nav ul li {
-        margin: 0;
-      }
+    nav ul li {
+      margin: 0;
+    }
 
-      nav ul li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-      }
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
 
-      nav ul li a:hover {
-        background-color: #555;
-      }
+    nav ul li a:hover {
+      background-color: #555;
+    }
 
-      /* Konten Section */
-      section {
-        padding: 20px;
-        height: 100vh; /* Tinggi setiap bagian */
-        text-align: center;
-      }
+    section {
+      padding: 20px;
+      height: 100vh;
+      text-align: center;
+    }
 
-      section:nth-child(odd) {
-        background-color: #f4f4f4;
-      }
+    section:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
 
-      section:nth-child(even) {
-        background-color: #e8e8e8;
-      }
+    section:nth-child(even) {
+      background-color: #e8e8e8;
+    }
 
-      /* Footer */
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <!-- Teks dengan animasi -->
-      <div class="animated-text">Selamat Datang</div>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#tugas">Tugas</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">Tentang Saya</a></li>
-      </ul>
-    </nav>
-    <section id="home">
-      <h2>Home</h2>
-      <p>Selamat datang di website portofolio saya</p>
-    </section>
-    <section id="tugas">
-      <h2>Tugas</h2>
-      <p>UJIAN TENGAH SEMESTER</p>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:email@contoh.com">mrifqi.fath@gmail.com</a></p>
-      <p>Telepon: 0896-2020-6621</p>
-    </section>
-    <section id="about">
-      <h2>Tentang Saya</h2>
-      <p>Halo! Nama Saya Muhammad Rifqi Fathurrahman,Saya Adalah Seorang Mahasiswa
-        Program Studi Teknik Informatika di Universitas Riau dan Ini Adalah Web
-        Pertama yang Telah Saya Buat.saya lahir di Pekanbaru pada tanggal 9 Mei
-        2005.</p>
-    </section>
-    <footer>
-      <p>&copy; Portofolio Muhammad Rifqi Fathurrahman</p>
-    </footer>
-  </body>
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="animated-text">Selamat Datang</div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tugas">Tugas</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">Tentang Saya</a></li>
+    </ul>
+  </nav>
+  <section id="home">
+    <h2>Home</h2>
+    <p>Selamat datang di website portofolio saya</p>
+  </section>
+  <section id="tugas">
+    <h2>Tugas</h2>
+    <p>UJIAN TENGAH SEMESTER</p>
+    <!-- Menambahkan tombol download -->
+    <a href="UTS SISMUL.pdf" download>Download UTS SISMUL</a>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mrifqi.fath@gmail.com">mrifqi.fath@gmail.com</a></p>
+    <p>Telepon: 0896-2020-6621</p>
+  </section>
+  <section id="about">
+    <h2>Tentang Saya</h2>
+    <p>Halo! Nama Saya Muhammad Rifqi Fathurrahman, Saya Adalah Seorang Mahasiswa
+      Program Studi Teknik Informatika di Universitas Riau dan Ini Adalah Web
+      Pertama yang Telah Saya Buat. Saya lahir di Pekanbaru pada tanggal 9 Mei
+      2005.</p>
+  </section>
+  <footer>
+    <p>&copy; Portofolio Muhammad Rifqi Fathurrahman</p>
+  </footer>
+</body>
 </html>
-
