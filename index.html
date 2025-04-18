@@ -1,173 +1,1103 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Saya</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Muhammad Rifqi Fathurrahman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      /* Gaya Umum */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-
-      header {
-        background-color: #333;
-        color: white;
-        padding: 15px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-
-      .animated-text {
-        display: inline-block;
-        font-size: 36px;
-        font-weight: bold;
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 2px solid white;
-        animation: typing 4s steps(14) 1s forwards, blink 0.5s step-end infinite;
-      }
-
-      @keyframes typing {
-        from {
-          width: 0;
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
         }
-        to {
-          width: 14ch;
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
-
-      @keyframes blink {
-        50% {
-          border-color: transparent;
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
         }
-      }
-
-      nav {
-        background-color: #444;
-        overflow: hidden;
-      }
-
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      nav ul li {
-        margin: 0;
-      }
-
-      nav ul li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-      }
-
-      nav ul li a:hover {
-        background-color: #555;
-      }
-
-      section {
-        padding: 20px;
-        height: auto;
-        text-align: center;
-      }
-
-      section:nth-child(odd) {
-        background-color: #f4f4f4;
-      }
-
-      section:nth-child(even) {
-        background-color: #e8e8e8;
-      }
-
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            color: var(--dark-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(5px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        .animated-text {
+            display: inline-block;
+            font-size: 36px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid white;
+            animation: typing 4s steps(14) 1s forwards, blink 0.5s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 14ch; }
+        }
+        
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
+            color: white;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content h1 span {
+            color: var(--primary-color);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            height: 90%;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* About Section */
+        #about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .about-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-item i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* Tugas Section */
+        #tugas {
+            padding: 100px 0;
+            background-color: var(--light-color);
+        }
+        
+        .tugas-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .download-btn {
+            margin: 20px 0;
+        }
+        
+        /* Media Format Styles */
+        .media-section {
+            margin: 50px 0;
+            width: 100%;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .media-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .media-card h4 {
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            margin: 0;
+        }
+        
+        .media-card-content {
+            padding: 20px;
+        }
+        
+        .media-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #eee;
+        }
+        
+        audio, video {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        /* Contact Section */
+        #contact {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .hero-image {
+                display: none;
+            }
+            
+            .media-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--secondary-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.5s ease;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <div class="animated-text">Selamat Datang</div>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Rifqi<span>.</span></a>
+            <nav>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">Tentang Saya</a></li>
+                    <li><a href="#tugas">Tugas</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#tugas">Tugas</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">Tentang Saya</a></li>
-      </ul>
-    </nav>
+
+    <!-- Hero Section -->
     <section id="home">
-      <h2>Home</h2>
-      <p>Halo! nama saya Muhammad Rifqi Fathurrahman</p>
-    </section>
-    <section id="about">
-      <h2>Tentang Saya</h2>
-      <img
-        src="foto-saya.jpg.jpg"
-        alt="Foto Saya"
-        style="width: 600px; border-radius: 10px; margin-bottom: 20px"
-      />
-      <p>
-        Halo! Nama saya <strong>Muhammad Rifqi Fathurrahman</strong>. Saya adalah mahasiswa Program Studi Teknik Informatika di <strong>Universitas Riau</strong>. Ini merupakan website portofolio pertama yang saya buat sebagai bagian dari proses pembelajaran dan pengembangan diri di dunia teknologi dan pemrograman.<br /><br />
-        Saya lahir di Pekanbaru pada tanggal <strong>9 Mei 2005</strong>, dan saya memiliki minat besar dalam bidang teknologi informasi serta pengembangan web. Terima kasih telah mengunjungi website saya!
-      </p>
-      </p>
-    </section>
-    <section id="tugas">
-      <h2>Tugas</h2>
-      <p>UJIAN TENGAH SEMESTER</p>
-      <a href="UTS SISMUL.pdf" download>Download UTS SISMUL</a>
-      <br /><br />
-      <h3>VIDEO</h3>
-      <video width="240" controls>
-        <source src="video saya.mp4" type="video/mp4" />
-        Browser Anda tidak mendukung pemutar video.
-      </video>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:mrifqi.fath@gmail.com">mrifqi.fath@gmail.com</a>
-      </p>
-      <p>
-        <i class="fab fa-whatsapp"></i>
-        <a href="https://wa.me/6289620206621" target="_blank">0896-2020-6621</a>
-      </p>
-      <p>
-        <i class="fab fa-instagram"></i>
-        <a href="https://www.instagram.com/rifqi_fthr" target="_blank"
-          >@rifqi_fth</a
-        >
-      </p>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Halo, Saya <span>Muhammad Rifqi Fathurrahman</span></h1>
+                <p>Mahasiswa Teknik Informatika di Universitas Riau yang bersemangat tentang pengembangan web dan teknologi.</p>
+                <div class="hero-btns">
+                    <a href="#about" class="btn">Pelajari Tentang Saya</a>
+                    <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Hero Image">
+            </div>
+        </div>
     </section>
 
-    <footer>
-      <p>&copy; Portofolio Muhammad Rifqi Fathurrahman</p>
-    </footer>
-  </body>
-</html>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p class="section-subtitle">Mari berkenalan lebih dekat dengan saya</p>
+            
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="foto-saya.jpg.jpg" alt="Foto Saya">
+                </div>
+                <div class="about-content">
+                    <h3>Mahasiswa Teknik Informatika yang Kreatif dan Berdedikasi</h3>
+                    <p>
+                        Halo! Nama saya <strong>Muhammad Rifqi Fathurrahman</strong>. Saya adalah mahasiswa Program Studi Teknik Informatika di <strong>Universitas Riau</strong>. 
+                        Ini merupakan website portofolio pertama yang saya buat sebagai bagian dari proses pembelajaran dan pengembangan diri di dunia teknologi dan pemrograman.
+                    </p>
+                    <p>
+                        Saya memiliki minat besar dalam bidang pengembangan web dan selalu bersemangat untuk mempelajari teknologi baru. 
+                        Saya percaya bahwa dengan kerja keras dan dedikasi, saya dapat menjadi seorang profesional di bidang ini.
+                    </p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>Nama: Muhammad Rifqi Fathurrahman</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Tanggal Lahir: 9 Mei 2005</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Lokasi: Pekanbaru, Indonesia</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Pendidikan: Universitas Riau</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#tugas" class="btn">Lihat Tugas Saya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tugas Section -->
+    <section id="tugas">
+        <div class="container tugas-container">
+            <h2 class="section-title">Tugas Saya</h2>
+            <p class="section-subtitle">Berikut adalah beberapa tugas yang telah saya selesaikan</p>
+            
+            <div class="download-btn">
+                <h3>UJIAN TENGAH SEMESTER</h3>
+                <p>Silakan unduh file UTS Sistem Multimedia saya</p>
+                <a href="UTS SISMUL.pdf" download class="btn">
+                    <i class="fas fa-download"></i> Download UTS SISMUL
+                </a>
+            </div>
+            
+            <!-- Font Section -->
+            <div class="media-section">
+                <h3>Font Populer</h3>
+                <div class="media-grid">
+                    <div class="media-card">
+                        <h4>Arial</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: Arial, sans-serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Times New Roman</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: 'Times New Roman', serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Helvetica</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: Helvetica, sans-serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Calibri</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: Calibri, sans-serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Roboto</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: 'Roboto', sans-serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Verdana</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: Verdana, sans-serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Georgia</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: Georgia, serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Futura</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: 'Futura', sans-serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Courier New</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: 'Courier New', monospace; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>Open Sans</h4>
+                        <div class="media-card-content">
+                            <p style="font-family: 'Open Sans', sans-serif; font-size: 1.2em;">Muhammad Rifqi Fathurrahman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Formats Section -->
+            <div class="media-section">
+                <h3>10 Format Gambar Populer</h3>
+                <div class="media-grid">
+                    <div class="media-card">
+                        <h4>1. JPEG</h4>
+                        <img src="foto-saya jpeg.jpeg" alt="JPEG Format">
+                        <div class="media-card-content">
+                            <p>Format gambar kompresi lossy yang paling umum digunakan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>2. PNG</h4>
+                        <img src="foto-saya png.png" alt="PNG Format">
+                        <div class="media-card-content">
+                            <p>Format gambar lossless dengan dukungan transparansi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>3. GIF</h4>
+                        <img src="foto-saya gif.gif" alt="GIF Format">
+                        <div class="media-card-content">
+                            <p>Format gambar animasi dengan palet warna terbatas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>4. BMP</h4>
+                        <img src="foto-saya bmp.bmp" alt="BMP Format">
+                        <div class="media-card-content">
+                            <p>Format gambar bitmap tanpa kompresi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>5. TIFF</h4>
+                        <img src="foto-saya tiff.tif" alt="TIFF Format">
+                        <div class="media-card-content">
+                            <p>Format gambar berkualitas tinggi untuk pencetakan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>6. SVG</h4>
+                        <img src="foto-saya svg.svg" alt="SVG Format">
+                        <div class="media-card-content">
+                            <p>Format gambar vektor yang scalable</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>7. WebP</h4>
+                        <img src="foto-saya webp.webp" alt="WebP Format">
+                        <div class="media-card-content">
+                            <p>Format gambar modern dengan kompresi efisien</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>8. JPG</h4>
+                        <img src="foto-saya.jpg.jpg" alt="JPG Format">
+                        <div class="media-card-content">
+                            <p>Varian lain dari format JPEG</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>9. PSD</h4>
+                        <img src="foto-saya jpeg.psd" alt="PSD Format">
+                        <div class="media-card-content">
+                            <p>Format file Adobe Photoshop dengan layer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>10. EPS</h4>
+                        <img src="foto-saya jpeg.eps" alt="EPS Format">
+                        <div class="media-card-content">
+                            <p>Format vektor untuk kebutuhan percetakan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Audio Formats Section -->
+            <div class="media-section">
+                <h3>10 Format Audio Populer</h3>
+                <div class="media-grid">
+                    <div class="media-card">
+                        <h4>1. MP3</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.mp3" type="audio/mpeg">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio kompresi lossy paling populer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>2. WAV</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.wav" type="audio/wav">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio tanpa kompresi kualitas tinggi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>3. AAC</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.aac" type="audio/aac">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio standar untuk YouTube, iPhone</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>4. FLAC</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.flac" type="audio/flac">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio lossless kompresi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>5. ALAC</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.m4a" type="audio/mp4">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio lossless Apple</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>6. OGG</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.ogg" type="audio/ogg">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio open source</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>7. WMA</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.wma" type="audio/x-ms-wma">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio proprietary Microsoft</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>8. AIFF</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.aiff" type="audio/aiff">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio tanpa kompresi Apple</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>9. DSD</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/audio-saya.m4a" type="audio/mp4">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio resolusi sangat tinggi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>10. Opus</h4>
+                        <div class="media-card-content">
+                            <audio controls>
+                                <source src="Audio/tung-tung-sahur.opus" type="audio/ogg; codecs=opus">
+                                Browser Anda tidak mendukung pemutar audio.
+                            </audio>
+                            <p>Format audio untuk streaming real-time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Formats Section -->
+            <div class="media-section">
+                <h3>10 Format Video Populer</h3>
+                <div class="media-grid">
+                    <div class="media-card">
+                        <h4>1. MP4</h4>
+                        <video controls>
+                            <source src="video saya.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video paling kompatibel</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>2. AVI</h4>
+                        <video controls>
+                            <source src="video-saya.avi" type="video/avi">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video tanpa kompresi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>3. MKV</h4>
+                        <video controls>
+                            <source src="video saya.mkv" type="video/x-matroska">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video container fleksibel</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>4. MOV</h4>
+                        <video controls>
+                            <source src="video-saya.mov" type="video/quicktime">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video Apple QuickTime</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>5. WMV</h4>
+                        <video controls>
+                            <source src="video-saya.wmv" type="video/x-ms-wmv">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video Microsoft</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>6. FLV</h4>
+                        <video controls>
+                            <source src="video-saya.flv" type="video/x-flv">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video Flash</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>7. WebM</h4>
+                        <video controls>
+                            <source src="video-saya.webm" type="video/webm">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video open web standard</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>8. 3GP</h4>
+                        <video controls>
+                            <source src="video saya.3gp" type="video/3gpp">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video untuk perangkat mobile</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>9. MPEG-2</h4>
+                        <video controls>
+                            <source src="video saya.mpg" type="video/mpeg">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video standar DVD</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <h4>10. HEVC (H.265)</h4>
+                        <video controls>
+                            <source src="video-saya.hevc.mp4" type="video/mp4; codecs=hev1">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                        <div class="media-card-content">
+                            <p>Format video kompresi efisien</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <p class="section-subtitle">Jangan ragu untuk menghubungi saya melalui berbagai saluran berikut</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:mrifqi.fath@gmail.com">mrifqi.fath@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Telepon/WhatsApp</h3>
+                            <a href="https://wa.me/
